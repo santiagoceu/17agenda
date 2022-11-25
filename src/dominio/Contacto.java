@@ -1,12 +1,26 @@
 package dominio;
 public class Contacto{
 	String nombre;
-	String telefono;
-	public Contacto(String n, String t){
-		nombre=n;
-		telefono=t;
+	String numeroDeTelefono;
+	public Contacto(String n, String t){ // <nombre> <telefono>
+		this.nombre=n;
+		this.numeroDeTelefono=t;
+	}
+
+	public String getNombre() {
+		return this.nombre;
+	}
+
+	public void setNombre(String n) {
+		this.nombre = n;
+	}
+	public String getNumeroDeTelefono() {
+		return this.numeroDeTelefono;
+	}
+	public void setNumeroDeTelefono(String t) {
+		this.numeroDeTelefono=t;
 	}
 	public String toString(){
-		return "Nombre: " + nombre + "\nTelefono: " + telefono;
+		return "Nombre: " + this.nombre + "\nTelefono: " + this.numeroDeTelefono;
 	}
 }
