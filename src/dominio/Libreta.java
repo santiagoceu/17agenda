@@ -1,7 +1,7 @@
 package dominio;
 import java.util.ArrayList;
-
-public class Libreta{
+import java.io.Serializable;
+public class Libreta implements Serializable{
 	private ArrayList<Contacto> lista;
 	public Libreta(){
 		lista=new ArrayList<Contacto>();

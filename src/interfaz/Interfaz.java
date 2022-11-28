@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Interfaz {
 	public boolean procesarPeticion (String peticion, Libreta l){
 		String [] p=peticion.split(" ");
-		if (p[0].equals("add"))
+		if (p[0].equals("add") && (p.length>1))
 			l.add(new Contacto(p[1],p[2]));
 		else if (p[0].equals("list"))
 			System.out.print(l);
