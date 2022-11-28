@@ -13,6 +13,15 @@ public class Libreta implements Serializable{
 	public int size() {
 		return lista.size();
 	}
+
+	public void remove(int id) {
+		for (Contacto c : this.lista) {
+			if (c.getId()==id) {
+				for (int i=id+1;i<=lista.size();i++)
+					lista.get(i).setId(i-1);
+			}
+		}
+	}
 	public String toString(){
 		String cadena="";
 		for(Contacto c:lista)

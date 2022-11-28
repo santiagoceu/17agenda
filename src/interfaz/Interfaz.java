@@ -14,8 +14,8 @@ public class Interfaz {
 			System.out.print(l);
 		else if (p[0].equals("help"))
 			System.out.print("Introduzca una de las siguientes peticiones: \n add <nombre> <telefono> \nlist \nexit");
-		// else if (p[0].equals("remove") && (p.length>1))
-			
+		else if (p[0].equals("remove") && (p.length>1))
+			l.remove(Integer.parseInt(p[1]));
 		else if (p[0].equals("exit"))
 			return false;
 		return true;
