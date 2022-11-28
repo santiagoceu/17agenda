@@ -3,9 +3,11 @@ import java.io.Serializable;
 public class Contacto implements Serializable {
 	String nombre;
 	String numeroDeTelefono;
-	public Contacto(String n, String t){ // <nombre> <telefono>
+	int id;
+	public Contacto(String n, String t,int i){ // <nombre> <telefono>
 		this.nombre=n;
 		this.numeroDeTelefono=t;
+		this.id=i;
 	}
 
 	public String getNombre() {
@@ -21,7 +23,13 @@ public class Contacto implements Serializable {
 	public void setNumeroDeTelefono(String t) {
 		this.numeroDeTelefono=t;
 	}
+	public int getId() {
+		return this.id;
+	}
+	public void setId(int i) {
+		this.id = i;
+	}
 	public String toString(){
-		return "Nombre: " + this.nombre + "\nTelefono: " + this.numeroDeTelefono;
+		return "ID: " + this.id + " | Nombre: " + this.nombre + " | Telefono: " + this.numeroDeTelefono;
 	}
 }
