@@ -3,11 +3,11 @@ import java.io.Serializable;
 public class Contacto implements Serializable {
 	String nombre;
 	String numeroDeTelefono;
-	int id;
-	public Contacto(String n, String t,int i){ // <nombre> <telefono>
+
+	public Contacto(String n, String t){ // <nombre> <telefono>
 		this.nombre=n;
 		this.numeroDeTelefono=t;
-		this.id=i;
+
 	}
 
 	public String getNombre() {
@@ -23,13 +23,20 @@ public class Contacto implements Serializable {
 	public void setNumeroDeTelefono(String t) {
 		this.numeroDeTelefono=t;
 	}
-	public int getId() {
-		return this.id;
+	
+	public boolean equals(Object o) {
+		if(o == null) {
+			return false;
+		}
+		else if (!o.getClass().equals(this.getClass())) {
+			return false;
+		}
+		else {
+			return ((Contacto) o).nombre.equals(this.nombre);
+		}
 	}
-	public void setId(int i) {
-		this.id = i;
-	}
+
 	public String toString(){
-		return "ID: " + this.id + " | Nombre: " + this.nombre + " | Telefono: " + this.numeroDeTelefono;
+		return "Nombre: " + this.nombre + " | Telefono: " + this.numeroDeTelefono;
 	}
 }
